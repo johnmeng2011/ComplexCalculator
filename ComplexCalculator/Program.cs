@@ -6,10 +6,29 @@ using System.Threading.Tasks;
 
 namespace ComplexCalculator
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+
+            var x = new ComplexNumber(3, 2);
+            var y = new ComplexNumber(-1,5);
+
+            var calculator  = new ComplexCalculator();
+
+            var z = calculator.Add(x, y);
+            Console.WriteLine("x+y=" + z.Real + "+" + z.Image + "i");
+            z = calculator.Subtract(x, y);
+            Console.WriteLine("x-y=" + z.Real + "+" + z.Image + "i");
+
+            z = calculator.Multiply(x, y);
+            Console.WriteLine("x*y=" + z.Real + "+" + z.Image + "i");
+
+            z = calculator.Divide(x, y);
+            Console.WriteLine("x/y=" + z.Real + "+" + z.Image + "i");
+
+            Console.ReadKey();
+
         }
     }
 }
