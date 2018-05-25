@@ -17,15 +17,15 @@ namespace ComplexCalculator
             var calculator  = new ComplexCalculator();
 
             var z = calculator.Add(x, y);
-            Console.WriteLine("x+y=" + z.Real + "+" + z.Image + "i");
+            Console.WriteLine("x+y="+ z.ToString());
             z = calculator.Subtract(x, y);
-            Console.WriteLine("x-y=" + z.Real + "+" + z.Image + "i");
+            Console.WriteLine("x-y=" + z.ToString());
 
             z = calculator.Multiply(x, y);
-            Console.WriteLine("x*y=" + z.Real + "+" + z.Image + "i");
+            Console.WriteLine("x*y=" + z.ToString());
 
             z = calculator.Divide(x, y);
-            Console.WriteLine("x/y=" + z.Real + "+" + z.Image + "i");
+            Console.WriteLine("x/y=" + z.ToString());
 
             Console.ReadKey();
 

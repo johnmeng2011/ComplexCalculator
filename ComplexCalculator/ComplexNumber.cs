@@ -25,7 +25,7 @@ namespace ComplexCalculator
         
         public override string ToString()
         {
-            return Real.ToString("##.000") + "+" + Image.ToString("##.000") + "i";
+            return Real.ToString("##.000") + (Image>=0? "+":"") + Image.ToString("##.000") + "i";
         }
 
       
