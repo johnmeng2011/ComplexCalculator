@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using ComplexCalculator;
 using FluentAssertions;
 using NUnit.Framework;
-using NUnit.Framework.Internal;
+using NSubstitute;
 
 namespace CalculatorTest
 {
@@ -18,7 +18,8 @@ namespace CalculatorTest
         [SetUp]
         public void SetUp()
         {
-            _calculator = new ComplexCalculator.ComplexCalculator();
+            var user = Substitute.For<IUser>();
+            _calculator = new ComplexCalculator.ComplexCalculator(user);
         }
         [Test]
         public void AddTest()

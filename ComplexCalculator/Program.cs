@@ -14,7 +14,9 @@ namespace ComplexCalculator
             var x = new ComplexNumber(3, 2);
             var y = new ComplexNumber(-1,5);
 
-            var calculator  = new ComplexCalculator();
+            var user = new User();
+
+            var calculator  = new ComplexCalculator(user);
 
             var z = calculator.Add(x, y);
             Console.WriteLine("x+y="+ z.ToString());
@@ -27,6 +29,8 @@ namespace ComplexCalculator
             z = calculator.Divide(x, y);
             Console.WriteLine("x/y=" + z.ToString());
 
+            var fee = calculator.GetServiceFee();
+            Console.WriteLine("Service Fee=" + fee);
             Console.ReadKey();
 
         }

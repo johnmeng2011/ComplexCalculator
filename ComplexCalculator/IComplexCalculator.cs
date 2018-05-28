@@ -12,5 +12,6 @@ namespace ComplexCalculator
         ComplexNumber Subtract(ComplexNumber op1, ComplexNumber op2);
         ComplexNumber Multiply(ComplexNumber op1, ComplexNumber op2);
         ComplexNumber Divide(ComplexNumber op1, ComplexNumber op2);
+        decimal GetServiceFee();
     }
 }
